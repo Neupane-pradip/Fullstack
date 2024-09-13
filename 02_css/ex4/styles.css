@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  grid-template-areas: 
+      "h"
+      "m"
+      "f";
+  height: 100vh;
+}
+
+header {
+  background-color: lavender;
+  width: 100%;
+  padding: 1.5rem;
+  grid-area: h;
+}
+
+main {
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
+  grid-area: m;
+  display: grid;
+}
+
+article {
+  background-color: lightblue;
+  border: solid;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-areas: 
+      "sec1 aside1"
+      "sec2 aside2";
+  height: 100%;
+}
+
+section {
+  border: solid;
+  margin: 0;
+}
+
+/* Set grid areas for sections and asides */
+#section1 {
+  grid-area: sec1;
+}
+
+#section2 {
+  grid-area: sec2;
+}
+
+#aside1 {
+  grid-area: aside1;
+}
+
+#aside2 {
+  grid-area: aside2;
+}
+
+aside {
+  border: solid;
+  background-color: cornflowerblue;
+  margin: 0;
+}
+
+footer {
+  background-color: darkslategray;
+  grid-area: f;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for navigation */
+  grid-template-areas: 
+      "nav1 nav2";
+  padding: 1.5rem;
+}
+
+/* Set grid areas for navigation elements */
+#nav1 {
+  grid-area: nav1;
+}
+
+#nav2 {
+  grid-area: nav2;
+}
